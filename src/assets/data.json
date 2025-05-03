@@ -1,0 +1,28 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "Basic Tee",
+      "price": 35.00,
+      "availableCount": 10,
+      "description": "A comfortable and versatile basic t-shirt.",
+      "category": "Clothing"
+    },
+    {
+      "id": 2,
+      "name": "Classic Jeans",
+      "price": 75.00,
+      "availableCount": 5,
+      "description": "Classic fit denim jeans.",
+      "category": "Clothing"
+    },
+    {
+      "id": 3,
+      "name": "Sneakers",
+      "price": 95.00,
+      "availableCount": 8,
+      "description": "Casual everyday sneakers.",
+      "category": "Footwear"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+<div>
+  <header class="header">
+    <h1>My Bajar Shop</h1>
+  </header>
+  <main>
+    <app-loading-icon *ngIf="isLoading"></app-loading-icon>
+    
+    <table class="table" *ngIf="!isLoading">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Product Name</th>
+          <th>Available</th>
+          <th>Price (₹)</th>
+          <th>Quantity</th>
+          <th>Total</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <app-product 
+          *ngFor="let product of products" 
+          [product]="product"
+          (updateQuantity)="updateQuantity($event.productId, $event.change)">
+        </app-product>
+      </tbody>
+    </table>
+    
+    <h2>Order Details</h2>
+    <div class="order-summary">
+      <p>Subtotal: ₹ {{ subtotalAmount | number:'1.2-2' }}</p>
+      <p *ngIf="hasGst">GST (18%): ₹ {{ gstAmount | number:'1.2-2' }}</p>
+      <p class="total">Total: ₹ {{ totalAmount | number:'1.2-2' }}</p>
+    </div>
+  </main>
+</div>

@@ -1,0 +1,18 @@
+<tr>
+  <td>{{ product.id }}</td>
+  <td>{{ product.name }}</td>
+  <td>{{ product.availableCount }}</td>
+  <td>₹{{ product.price | number:'1.2-2' }}</td>
+  <td>{{ product.orderedQuantity }}</td>
+  <td>₹{{ product.total | number:'1.2-2' }}</td>
+  <td>
+    <button 
+      class="actionButton"
+      [disabled]="!canAdd()"
+      (click)="addItem()">+</button>
+    <button 
+      class="actionButton"
+      [disabled]="!canRemove()"
+      (click)="removeItem()">-</button>
+  </td>
+</tr>
